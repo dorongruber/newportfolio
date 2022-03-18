@@ -1,0 +1,159 @@
+
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 2em;
+  box-sizing: border-box;
+}
+
+
+img {
+  border-radius: 50%;
+  float: right;
+  margin-top: 1em;
+  border: 6px solid #D49015;
+}
+
+.land-container {
+  height: 100vh;
+  background-color: #141E30;
+  background: linear-gradient(to right, #324147);
+  position: relative;
+  z-index: 0;
+}
+
+
+  h2 spam {
+    font-size: .5em;
+  }
+
+
+@media screen and (min-width: 260px) {
+
+  .landingpage-secondry-title {
+    height: 4.5em;
+    font-size: xx-large;
+    margin-left: .2em;
+    margin-bottom: 0;
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-style: italic;
+    color: #fcedd8;
+    width: 70vw;
+    box-sizing: border-box;
+
+  }
+
+  h4 {
+    position: absolute;
+    font-size: larger;
+    color: white;
+    font-family: 'Rubik';
+    bottom: 1em;
+    left: 1em;
+    width: 75vw;
+  }
+
+  .extra-scroll {
+    position: absolute;
+    bottom: -115px;
+    left: 0;
+    height: 15vh;
+    width: 100%;
+  }
+
+  img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media screen and (min-width: 551px) {
+
+  .landingpage-secondry-title {
+    position: sticky;
+    left: 3em;
+    top: 15.5em;
+    width: min-content;
+    height: min-content;
+    font-size: xx-large;
+    transform: scale(2);
+    margin-top: 0em;
+    margin-left: .5em;
+    margin-bottom: 0;
+    font-family: 'Roboto';
+    color: black;
+    width: min-content;
+  }
+
+  h4 {
+    position: absolute;
+    font-size: xx-large;
+    color: white;
+    font-family: 'Roboto';
+    bottom: 1em;
+    left: 2em;
+    width: fit-content;
+  }
+
+  .extra-scroll {
+    position: absolute;
+    bottom: -135px;
+    left: 0;
+    height: 15vh;
+    width: 100%;
+  }
+
+  img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media only screen and (min-width: 801px) {
+
+  .landingpage-secondry-title {
+    position: sticky;
+    left: 6em;
+    top: 13.5em;
+    height: min-content;
+    font-size: x-large;
+    margin-top: 0em;
+    margin-left: .5em;
+    margin-bottom: 0;
+    font-family: 'Roboto';
+    font-weight: 200;
+    font-style: italic;
+    color: black;
+    width: fit-content;
+
+  }
+
+  .text {
+    display: flex;
+    justify-content: center;
+  }
+
+  h4 {
+    font-size: x-large;
+    color: white;
+    font-family: 'Roboto';
+    bottom: 1em;
+    left: auto;
+    margin: 0;
+  }
+
+  .extra-scroll {
+    position: absolute;
+    bottom: -135px;
+    left: 0;
+    height: 15vh;
+    width: 100%;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+  }
+}

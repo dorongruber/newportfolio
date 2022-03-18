@@ -1,0 +1,92 @@
+.page-container {
+
+  height: 100vh;
+  background: darkgray;
+}
+
+.sidenav-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #D49015;
+  position: fixed;
+  left: 0;
+  transition: width 1.3s ease-in-out;
+  z-index: 100;
+}
+
+.section-container {
+  position: absolute;
+  left: 45px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+}
+
+
+@media only screen and (min-width: 300px) {
+
+  .icon-container {
+    margin: 1em 0;
+  }
+
+  .sidenav-container {
+    width: 45px;
+    height: 100vh;
+    animation: InitSideNav 2s ease-in-out;
+  }
+
+  .loadscreen {
+    width: 100vw;
+  }
+
+  .icon {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+
+  .icon-container {
+    margin: 1em 0;
+  }
+
+  .sidenav-container {
+    width: 45px;
+    height: 100vh;
+  }
+
+  .loadscreen {
+    width: 100vw;
+  }
+
+  .icon {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+
+  .icon-container {
+    margin: 1em 0;
+  }
+
+  .sidenav-container {
+    width: 45px;
+    height: 100vh;
+  }
+
+  .loadscreen {
+    width: 100vw;
+  }
+
+  .icon {
+    font-size: 35px;
+  }
+}
+
+@keyframes InitSideNav {
+  from {width: 100%}
+  to {width: 45px;}
+}

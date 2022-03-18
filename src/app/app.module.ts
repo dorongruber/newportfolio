@@ -1,16 +1,51 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import {MatIconModule} from '@angular/material/icon';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { MainComponent } from './routes/main/main.component';
+import { ProjectComponent } from './routes/project/project.component';
+import { ContentpagefactoryComponent } from './factorys/contentpagefactory/contentpagefactory.component';
+import { ComponentDirective } from './directives/component.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { IconComponent } from './components/icon/icon.component';
+import { LandingComponent } from './components/landing/landing.component';
+import { AboutComponent } from './components/about/about.component';
+import { TechnologiesComponent } from './components/technologies/technologies.component';
+import { ExperienceComponent } from './components/experience/experience.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    MainComponent,
+    ProjectComponent,
+    ContentpagefactoryComponent,
+    ComponentDirective,
+    IconComponent,
+    LandingComponent,
+    AboutComponent,
+    TechnologiesComponent,
+    ExperienceComponent,
+    ProjectsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

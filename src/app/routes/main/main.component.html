@@ -1,0 +1,11 @@
+<div class="page-container">
+  <div class="sidenav-container">
+    <div class="sidenav-elements-container">
+      <app-navbar></app-navbar>
+    </div>
+  </div>
+
+  <div class="section-container" [style.width]="windowWidth">
+    <app-contentpagefactory [componentRef]="selectedComponent" [selectedPage]="selectedIndex"></app-contentpagefactory>
+  </div>
+</div>

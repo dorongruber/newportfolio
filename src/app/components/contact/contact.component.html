@@ -1,0 +1,41 @@
+<div class="contact-container">
+  <h1>Let's create something together</h1>
+
+<div class="form-container">
+  <form [formGroup]="messageFormat">
+
+    <div class="input-container">
+      <label for="address">Your Email:</label>
+      <input id="address" type="email" formControlName="fromAddress">
+    </div>
+
+    <div class="input-container">
+      <label for="title">Subject:</label>
+      <input id="title" type="text" formControlName="subject">
+    </div>
+
+    <div class="input-container">
+      <label for="message">Your Message:</label>
+      <textarea id="message" type="text" formControlName="newMessage"></textarea>
+      <button (click)="SendMail(messageFormat)">send</button>
+    </div>
+
+  </form>
+</div>
+  <div class="contactInfo-container">
+    <div class="info-row">
+      <mat-icon class="icon">phone</mat-icon>
+      <div class="text">+972-526230445</div>
+    </div>
+    <div class="info-row">
+      <mat-icon class="icon">email</mat-icon>
+      <div class="text">doron.gruber@gmail.com</div>
+    </div>
+    <div class="info-row icons">
+      <a href="https://github.com/dorongruber/">
+        <img class="git-icon" src="../../assets/images/GitHub-Mark-Light-64px.png"></a>
+      <a href="https://www.linkedin.com/in/doron-gruber-5a47ba130/">
+        <img class="git-icon" src="../../assets/images/LI-In-Bug.png"></a>
+    </div>
+  </div>
+</div>

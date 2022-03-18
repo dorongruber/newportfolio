@@ -1,0 +1,35 @@
+<div class="tech-page-container">
+  <div class="header-container">
+    <h1 class="header tech-header" data-text="technologies">
+      technologies
+     </h1>
+  </div>
+  <div class="img-row-container">
+    <div class="img-col-container">
+      <div class="center-img">
+        <img class="img-title" src="../../assets/images/webdesign.png">
+      </div>
+      <h2> FRONT END</h2>
+    </div>
+  </div>
+  <div class="front-container">
+
+    <ng-container *ngFor="let icon of iconsFront">
+      <img class="image" [src]="icon">
+    </ng-container>
+  </div>
+  <div class="img-row-container">
+    <div class="img-col-container">
+      <div class="center-img">
+        <img class="img-title" src="../../assets/images/backend.png">
+      </div>
+      <h2> BACK END</h2>
+    </div>
+  </div>
+  <div class="back-container">
+
+    <ng-container *ngFor="let icon of iconsBack">
+      <img class="image" [src]="icon">
+    </ng-container>
+  </div>
+</div>

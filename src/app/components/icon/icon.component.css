@@ -1,0 +1,25 @@
+.icon {
+  color: #DAE8F7;
+}
+
+@media only screen and (min-width: 300px) {
+
+  .icon {
+    font-size: 35px;
+    width: 1.1em;
+    height: 1em;
+    text-align: center;
+  }
+}
+
+
+@media only screen and (min-width: 800px) {
+
+  .icon {
+    font-size: 35px;
+    width: 1.1em;
+    height: 1em;
+    text-align: center;
+    cursor: pointer;
+  }
+}
