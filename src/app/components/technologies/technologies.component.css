@@ -47,7 +47,15 @@
   justify-content: center;
 }
 
-@media only screen and (min-width: 550px) {
+@media screen and (max-width: 640px) {
+
+  .header {
+    height: 57px !important;
+    line-height: 48px !important;
+  }
+}
+
+@media only screen and (min-width: 640px) {
   .tech-header {
     font-size: 4em !important;
   }

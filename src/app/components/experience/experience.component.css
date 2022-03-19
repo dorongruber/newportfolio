@@ -13,6 +13,10 @@
 
 @media only screen and (min-width: 260px) {
 
+  .header {
+    height: 115px !important;
+    line-height: 48px !important;
+  }
 
   .about-page-header-container {
     display: flex;
@@ -23,10 +27,10 @@
 
 
   .projects-header {
-    font-size: 2em !important;
+    font-size: 3em !important;
     margin-bottom: 3em !important;
     margin-top: 0;
-    padding-top: 2em;
+    padding-top: 1em;
   }
 
   .about-page-content {
