@@ -9,11 +9,13 @@ export class ControlService {
 
   constructor() {
     const storedIndex = this.localStorage.getItem('currentPageIndex');
-    this.pageChanged.next(storedIndex? +storedIndex : this.currentPage);
+    this.currentPage = storedIndex? +storedIndex : this.currentPage
+    this.pageChanged.next(this.currentPage);
   }
 
   setCurrentPage(page: number) {
     this.currentPage = page;
+    this.localStorage.setItem('currentPageIndex', `${this.currentPage}`);
     this.pageChanged.next(this.currentPage);
   }
 

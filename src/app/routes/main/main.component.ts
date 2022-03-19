@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { LandingComponent } from 'src/app/components/landing/landing.component';
-import { Icon } from 'src/app/models/icon';
 import { TemplateComponent } from 'src/app/models/template-component';
 import { ControlService } from 'src/app/services/control.service';
 import { SelectedComponentService } from 'src/app/services/selectcomponent.service';
@@ -16,24 +14,25 @@ export class MainComponent implements OnInit {
   windowWidth: number = 0;
   localStorage = window.localStorage;
   selectedComponent: TemplateComponent;
+  elementRef: any;
   constructor(
     private controlService: ControlService,
     private selectedComponentService: SelectedComponentService
   ) {
-    this.selectedComponent = this.selectedComponentService.getLandingPage();
+    this.selectedIndex = this.controlService.getCurrentPage();
+    this.selectedComponent = this.selectedComponentService.InitComponentRef(this.selectedIndex);
   }
 
   ngOnInit() {
     this.windowWidth = window.innerWidth - 45;
-
+    this.elementRef =document.querySelector('.sidenav-container');
     this.controlService.setCurrentPage(this.selectedIndex);
-    this.ShowPage(this.selectedIndex);
+    this.ShowPage();
 
     this.controlService.pageChanged
     .subscribe(page => {
       this.selectedIndex = page;
-      //this.selectedComponent = this.selectedComponentService.InitComponentRef(this.selectedIndex);
-      this.ShowPage(this.selectedIndex);
+      this.ShowPage();
     });
 
     window.addEventListener('unload', (event) => {
@@ -43,17 +42,15 @@ export class MainComponent implements OnInit {
 
 
 
-  ShowPage(index: number) {
-    const selectedEl = document.querySelector('.sidenav-container');
-    if(selectedEl) {
-      selectedEl.classList.toggle('loadscreen');
+  ShowPage() {
+    if(this.elementRef) {
+      this.elementRef.classList.toggle('loadscreen');
       setTimeout(() => {
         this.selectedComponent = this.selectedComponentService.InitComponentRef(this.selectedIndex);
-        selectedEl.classList.toggle('loadscreen');
+        if(this.elementRef)
+          this.elementRef.classList.toggle('loadscreen');
       }, 1300);
       this.localStorage.removeItem('currentPageIndex');
-      this.localStorage.setItem('currentPageIndex', `${index}`);
     }
-
   }
 }
