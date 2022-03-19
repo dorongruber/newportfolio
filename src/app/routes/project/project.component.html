@@ -1,1 +1,45 @@
-<p>project works!</p>
+<div class="project1-container">
+
+  <header class="project-header-container">
+    <h1 class="project1-main-title">
+      Calendar
+    </h1>
+    <ng-container *ngIf="project.gitUrl.length > 0">
+      <a href="{{project.gitUrl}}"><img class="git-icon" src="../../assets/images/GitHub-Mark-Light-64px.png"></a>
+    </ng-container>
+  </header>
+
+  <div class="about-project-conainer">
+    <ul>
+      <ng-container *ngFor="let line of project.aboutProject">
+        <li>{{line}}</li>
+      </ng-container>
+    </ul>
+  </div>
+
+  <div class="technologys-container">
+
+    <ul class="front-technologys-container">
+      <h2>Front End</h2>
+      <ng-container *ngFor="let fronttech of project.frontTech">
+        <li>{{fronttech}}</li>
+      </ng-container>
+    </ul>
+
+    <ul class="back-technologys-container">
+      <h2>Back End</h2>
+      <ng-container *ngFor="let backtech of project.backTech">
+        <li>{{backtech}}</li>
+      </ng-container>
+    </ul>
+  </div>
+
+  <ul class="images-gallery-container">
+    <h1 class="project1-main-title">
+      Gallery
+    </h1>
+    <ng-container *ngFor="let imageurl of project.images">
+      <img src='{{imageurl}}'>
+    </ng-container>
+  </ul>
+</div>
