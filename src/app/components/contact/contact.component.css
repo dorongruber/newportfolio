@@ -143,6 +143,13 @@ button {
 
 
 @media only screen and (min-width: 800px) {
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   input {
     width: 32em;
     margin-left: 2em;
@@ -164,8 +171,8 @@ button {
     position: absolute;
     font-size: 2.5em;
     color: aqua;
-    top: 2em;
-    left: 11.5em;
+    top: 9em;
+    left: 15.5em;
     width: 12em;
     margin: 0;
   }
