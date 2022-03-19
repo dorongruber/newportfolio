@@ -10,7 +10,6 @@ export class EmailService {
   ) {}
 
   SendEmail(email: {fromAddress: string, subject: string, newMessage: string}) {
-    console.log('SendEmail -> ', email);
     const test = {
       fromAddress: email.fromAddress,
       subject: email.subject,
