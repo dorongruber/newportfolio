@@ -25,7 +25,7 @@ class MailService {
           throw new Error(error)
         } else {
           console.log('Email sent: ' + info.response);
-          return true;
+          return 'The email was sent successfully, we will be in touch';
         }
       });
     } catch(err) {

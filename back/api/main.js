@@ -10,10 +10,10 @@ module.exports = router;
 function sendMail(req,res,next) {
   const {fromAddress, subject, text} = req.body;
   mailService.sendMail()
-  .then(mailSended => {
-    res.status(200).send(mailSended);
+  .then(successMessage => {
+    res.status(200).send(successMessage);
   })
   .catch(err => {
-    res.status(401).send({message: err});
+    res.status(401).send(err);
   })
 }
