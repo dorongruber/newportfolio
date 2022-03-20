@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { mailService } = require('../service/main');
+const { mailService } = require('../service/mail');
 
 router.post('/sendemail', sendMail)
 

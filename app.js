@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const emailRouter = require('./back/sendmail');
+const emailRouter = require('./back/api/mail');
 
 const app = express();
 app.use(cors());
