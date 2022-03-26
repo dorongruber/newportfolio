@@ -28,7 +28,7 @@
 
   .projects-header {
     font-size: 3em !important;
-    margin-bottom: 3em !important;
+    margin-bottom: 1em !important;
     margin-top: 0;
     padding-top: 1em;
   }
@@ -37,7 +37,7 @@
     text-align: left;
     font-size: 1.2em;
     line-height: 1.5em;
-    padding: 0 1em;
+    padding: 0 2em;
     color: white;
     box-sizing: border-box;
   }
@@ -70,6 +70,11 @@
 
 
 @media only screen and (min-width: 800px) {
+
+  .content-container {
+    width: 51%;
+    margin: auto;
+  }
 
   .header {
     height: 74px !important;

@@ -7,7 +7,7 @@ import { Icon } from 'src/app/models/icon';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  iconsList = ['home', 'account_circle', 'work', 'list', 'card_travel', 'mail'];
+  iconsList = ['home', 'work', 'account_circle', 'list', 'card_travel', 'mail'];
   colors = ['#324147', '#324147', '#324147', '#324147', '#324147', '#324147'];
   icons: Icon[] = [];
   constructor() { }
