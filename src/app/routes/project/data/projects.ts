@@ -42,7 +42,7 @@ export const projectsList: Project[] = [
       'create private\group chats with',
       'people who are currently login.'
     ],
-    gitUrl: 'https://github.com/dorongruber/chatproject',
+    gitUrl: 'https://github.com/dorongruber/chat',
     frontTech: [
       'angular',
       'RxJS',
@@ -59,10 +59,17 @@ export const projectsList: Project[] = [
       'socket.io'
     ],
     images: [
-      '../../assets/images/project3/login.PNG',
-      '../../assets/images/project3/mainpagechat.PNG',
-      '../../assets/images/project3/addnewchat.PNG',
-      '../../assets/images/project3/chat.PNG'
+      '../../assets/images/project3/login_m.PNG',
+      '../../assets/images/project3/register_m.PNG',
+      '../../assets/images/project3/landing_m.PNG',
+      '../../assets/images/project3/newchat_m.PNG',
+      '../../assets/images/project3/chat_m.PNG',
+      '../../assets/images/project3/chats_m.PNG',
+      '../../assets/images/project3/user_info_m.PNG',
+      '../../assets/images/project3/login_d.PNG',
+      '../../assets/images/project3/register_d.PNG',
+      '../../assets/images/project3/landing_d.PNG',
+      '../../assets/images/project3/newChat_userInfo_d.PNG'
     ],
   },
   {

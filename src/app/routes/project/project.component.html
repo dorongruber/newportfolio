@@ -38,8 +38,18 @@
     <h1 class="project1-main-title">
       Gallery
     </h1>
-    <ng-container *ngFor="let imageurl of project.images">
-      <img src='{{imageurl}}'>
+    <ng-container *ngIf="project.name !== 'Chat' else ChatProject">
+      <ng-container *ngFor="let imageurl of project.images">
+        <img src='{{imageurl}}'>
+      </ng-container>
     </ng-container>
+    <ng-template #ChatProject>
+      <ng-container *ngFor="let imageurl of project.images| slice: 0:7">
+        <img src='{{imageurl}}'>
+      </ng-container>
+      <ng-container *ngFor="let imageurl of project.images | slice: 7: project.images.length">
+        <img class="desktop-images" src='{{imageurl}}'>
+      </ng-container>
+    </ng-template>
   </ul>
 </div>
