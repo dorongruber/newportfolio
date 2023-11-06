@@ -1,1 +1,1 @@
-<mat-icon class="icon" [style.color]="color" (click)="onPageSelect()">{{icon.Name}}</mat-icon>
+<mat-icon class="icon" [ngClass]="{'active': isSelected}" (click)="onPageSelect()">{{icon.Name}}</mat-icon>

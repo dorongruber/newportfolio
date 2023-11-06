@@ -1,5 +1,5 @@
 .about-container {
-  height: 100vh;
+  min-height: 100%;
   background: rgb(136, 97, 13);
   position: relative;
   z-index: 0;
@@ -13,11 +13,6 @@
 
 @media only screen and (min-width: 260px) {
 
-  .header {
-    height: 115px !important;
-    line-height: 48px !important;
-  }
-
   .about-page-header-container {
     display: flex;
     justify-content: center;
@@ -27,7 +22,7 @@
 
 
   .projects-header {
-    font-size: 3em !important;
+    font-size: 2em !important;
     margin-bottom: 1em !important;
     margin-top: 0;
     padding-top: 1em;
@@ -35,11 +30,10 @@
 
   .about-page-content {
     text-align: left;
-    font-size: 1.2em;
     line-height: 1.5em;
-    padding: 0 2em;
     color: white;
     box-sizing: border-box;
+    padding-inline: 2em;
   }
 }
 
@@ -53,7 +47,7 @@
   }
 
   .projects-header {
-    font-size: 4em !important;
+    font-size: 2.5em !important;
     margin-bottom: 2em !important;
     margin-top: 0;
   }
@@ -64,7 +58,6 @@
     line-height: 1.5em;
     box-sizing: border-box;
     color: white;
-    padding: 0 2em;
   }
 }
 
@@ -72,12 +65,7 @@
 @media only screen and (min-width: 800px) {
 
   .content-container {
-    width: 51%;
-    margin: auto;
-  }
-
-  .header {
-    height: 74px !important;
+    padding-inline: 3rem;
   }
 
   .about-page-header-container {
@@ -98,15 +86,6 @@
     font-size: 1.5em;
     line-height: 1.5em;
     color: white;
-    padding: 0 7em;
     box-sizing: border-box;
   }
-}
-
-.header::before {
-  padding-top: 1.1em;
-}
-
-.header::after {
-  padding-top: 1em;
 }

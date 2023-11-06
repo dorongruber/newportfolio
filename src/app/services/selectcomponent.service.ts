@@ -16,9 +16,9 @@ export class SelectedComponentService {
       case 0:
         return this.getLandingPage();
       case 1:
-        return this.getExperincePage();
-      case 2:
         return this.getAboutPage();
+      case 2:
+        return this.getExperincePage();
       case 3:
         return this.getProjectsPage();
       case 4:

@@ -7,18 +7,19 @@ import { Icon } from 'src/app/models/icon';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  iconsList = ['home', 'work', 'account_circle', 'list', 'card_travel', 'mail'];
-  colors = ['#324147', '#324147', '#324147', '#324147', '#324147', '#324147'];
+  iconsList = ['home', 'account_circle','work', 'list', 'card_travel', 'mail'];
   icons: Icon[] = [];
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
     for (let i = 0 ; i < this.iconsList.length; i++ ) {
       this.icons.push({
         Name: this.iconsList[i],
-        Color: this.colors[i]
+        Color: '#324147'
       });
     }
+   }
+
+  ngOnInit(): void {
+
   }
 
 }

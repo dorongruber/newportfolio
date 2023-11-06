@@ -1,5 +1,7 @@
-<ng-container *ngFor="let icon of icons; let i = index">
-  <div class="icon-container">
-    <app-icon [index]="i" [icon]="icon" ></app-icon>
-  </div>
-</ng-container>
+<div class="sidenav-container">
+  <ng-container *ngFor="let icon of icons; let i = index">
+    <div class="icon-container">
+      <app-icon [index]="i" [icon]="icon" ></app-icon>
+    </div>
+  </ng-container>
+</div>

@@ -1,7 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+  --large-forn-size: 20px;
+  --medium-font-size: 16px;
+  --small-font-size: 12px;
 
+  --nav-bar-width: 50px;
+
+  --navbar-color: #D49015;
+
+
+  --color1: #FEF6C9;
+  --color2: #D4DFC7;
+  --color3: #96C0B7;
+  --color4: #878E88;
+  --color5: #725752;
+}
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'Rubik', "Helvetica Neue", sans-serif; }
+
+html * {
+  text-transform: capitalize;
+}

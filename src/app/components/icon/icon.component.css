@@ -1,25 +1,12 @@
 .icon {
-  color: #DAE8F7;
+  color: var(--color2);
+  font-size: 46px;
+  width: var(--nav-bar-width);
+  height: 46px;
+  text-align: center;
+  cursor: pointer;
 }
 
-@media only screen and (min-width: 300px) {
-
-  .icon {
-    font-size: 35px;
-    width: 1.1em;
-    height: 1em;
-    text-align: center;
-  }
-}
-
-
-@media only screen and (min-width: 800px) {
-
-  .icon {
-    font-size: 35px;
-    width: 1.1em;
-    height: 1em;
-    text-align: center;
-    cursor: pointer;
-  }
+.active {
+  color: var(--color5);
 }

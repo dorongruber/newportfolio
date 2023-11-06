@@ -1,0 +1,38 @@
+header {
+  display: flex;
+  justify-content: center;
+  padding-block: 30px;
+}
+
+.header {
+  position: relative;
+  width: fit-content;
+}
+
+.header h1 {
+  line-height: 66px;
+  font-size: 26px;
+  font-weight:700;
+  text-transform:uppercase;
+  text-align:center;
+  margin:auto;
+  white-space:nowrap;
+  text-shadow: none;
+}
+.header h1:before {
+  background-color: #c50000;
+  content: '';
+  display: block;
+  height: 3px;
+  width: 75px;
+}
+.header h1:after {
+  background-color: #c50000;
+  content: '';
+  display: block;
+  position:absolute;
+  right:0;
+  bottom:0;
+  height: 3px;
+  width: 75px;
+}

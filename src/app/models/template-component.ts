@@ -1,5 +1,5 @@
 import { Type } from "@angular/core";
 
 export class TemplateComponent {
-  constructor(public bodycomponent: Type<any>,public index: number) {}
+  constructor(public bodyComponent: Type<any>,public index: number) {}
 }

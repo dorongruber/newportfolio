@@ -6,7 +6,7 @@ import { EmailService } from 'src/app/services/mail.service';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  styleUrls: ['./contact.component.css', '../../styles/mainheader.component.css']
 })
 export class ContactComponent implements OnInit {
   messageFormat = new FormGroup({
@@ -23,7 +23,6 @@ export class ContactComponent implements OnInit {
   }
 
   SendMail(mail: FormGroup) {
-    console.log('ContactformComponent SendMail -> ', mail);
     const newmessage = {
       fromAddress: mail.value.fromAddress,
       subject: mail.value.subject,

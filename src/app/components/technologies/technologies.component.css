@@ -1,9 +1,7 @@
-.tech-page-container {
-  height: 100vh;
+.tech-page {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: column;
-  background: #8C5C03;
   position: relative;
   z-index: 0;
 }
@@ -47,14 +45,6 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 640px) {
-
-  .header {
-    height: 57px !important;
-    line-height: 48px !important;
-  }
-}
-
 @media only screen and (min-width: 640px) {
   .tech-header {
     font-size: 4em !important;
@@ -73,12 +63,6 @@
   .tech-header {
     font-size: 4em !important;
   }
-
-  /* .image {
-    width: 35px;
-    height: 35px;
-
-  } */
 
   .img-title {
     position: relative;

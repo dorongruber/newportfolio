@@ -1,41 +1,51 @@
-<div class="contact-container">
+<div class="container contact-page">
   <h1>Let's create something together</h1>
 
 <div class="form-container">
   <form [formGroup]="messageFormat">
 
     <div class="input-container">
-      <label for="address">Your Email:</label>
-      <input id="address" type="email" formControlName="fromAddress">
+      <label for="address">Your Email:
+        <input id="address" type="email" placeholder="Email" formControlName="fromAddress">
+      </label>
+
     </div>
 
     <div class="input-container">
-      <label for="title">Subject:</label>
-      <input id="title" type="text" formControlName="subject">
+      <label for="title">Subject:
+        <input id="title" type="text" placeholder="Subject" formControlName="subject">
+      </label>
+
     </div>
 
     <div class="input-container">
-      <label for="message">Your Message:</label>
-      <textarea id="message" type="text" formControlName="newMessage"></textarea>
+      <label for="message">Your Message:
+        <textarea id="message" type="text" formControlName="newMessage"></textarea>
+      </label>
+
       <button (click)="SendMail(messageFormat)">send</button>
     </div>
 
   </form>
-</div>
-  <div class="contactInfo-container">
-    <div class="info-row">
+
+  <ul>
+    <li class="info-row">
       <mat-icon class="icon">phone</mat-icon>
       <div class="text">+972-526230445</div>
-    </div>
-    <div class="info-row">
+    </li>
+    <li class="info-row">
       <mat-icon class="icon">email</mat-icon>
       <div class="text">doron.gruber@gmail.com</div>
-    </div>
-    <div class="info-row icons">
-      <a href="https://github.com/dorongruber/">
-        <img class="git-icon" src="../../assets/images/GitHub-Mark-Light-64px.png"></a>
-      <a href="https://www.linkedin.com/in/doron-gruber-5a47ba130/">
-        <img class="git-icon" src="../../assets/images/LI-In-Bug.png"></a>
-    </div>
-  </div>
+    </li>
+    <li class="info-row">
+      <img class="git-icon" width="24" height="24" src="../../assets/images/GitHub-Mark-Light-64px.png">
+      <a class="text" href="https://github.com/dorongruber/">github</a>
+    </li>
+    <li class="info-row">
+      <img class="git-icon" width="24" height="24" src="../../assets/images/LI-In-Bug.png">
+      <a class="text" href="https://www.linkedin.com/in/doron-gruber-5a47ba130/">linkedin</a>
+    </li>
+  </ul>
+</div>
+
 </div>

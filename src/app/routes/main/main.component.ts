@@ -9,48 +9,36 @@ import { SelectedComponentService } from 'src/app/services/selectcomponent.servi
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
-  selectedIndex = 0;
-  windowWidth: number = 0;
-  localStorage = window.localStorage;
   selectedComponent: TemplateComponent;
-  elementRef: any;
+  elementRef: HTMLElement | null = null;
   constructor(
     private controlService: ControlService,
     private selectedComponentService: SelectedComponentService
   ) {
-    this.selectedIndex = this.controlService.getCurrentPage();
-    this.selectedComponent = this.selectedComponentService.InitComponentRef(this.selectedIndex);
-  }
-
-  ngOnInit() {
-    this.windowWidth = window.innerWidth - 45;
-    this.elementRef =document.querySelector('.sidenav-container');
-    this.controlService.setCurrentPage(this.selectedIndex);
-    this.ShowPage();
-
-    this.controlService.pageChanged
-    .subscribe(page => {
-      this.selectedIndex = page;
-      this.ShowPage();
-    });
+    const index = this.controlService.getCurrentPage();
+    this.selectedComponent = this.selectedComponentService.InitComponentRef(index);
 
     window.addEventListener('unload', (event) => {
       window.localStorage.removeItem('currentPageIndex');
     });
   }
 
+  ngOnInit() {
+    this.elementRef = document.querySelector('.sidenav-container');
 
+    this.controlService.pageChanged
+    .subscribe(page => {
+      this.ShowPage(page);
+    });
+  }
 
-  ShowPage() {
+  ShowPage(index: number) {
     if(this.elementRef) {
       this.elementRef.classList.toggle('loadscreen');
       setTimeout(() => {
-        this.selectedComponent = this.selectedComponentService.InitComponentRef(this.selectedIndex);
-        if(this.elementRef)
-          this.elementRef.classList.toggle('loadscreen');
-      }, 1300);
-      this.localStorage.removeItem('currentPageIndex');
+        this.selectedComponent = this.selectedComponentService.InitComponentRef(index);
+        this.elementRef!.classList.toggle('loadscreen');
+      }, 500);
     }
   }
 }

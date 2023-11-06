@@ -11,6 +11,7 @@ export class IconComponent implements OnInit {
   @Input() icon: Icon;
   @Input()index: number;
   color: string = '';
+  isSelected: boolean = false;
   constructor(
     private controlService: ControlService
   ) {
@@ -21,7 +22,7 @@ export class IconComponent implements OnInit {
   ngOnInit() {
     this.color = this.icon.Color;
     this.controlService.pageChanged.subscribe(res => {
-      this.color = res !== this.index ? this.icon.Color : '#DAE8F7';
+      this.isSelected = res == this.index;
 
     });
   }
