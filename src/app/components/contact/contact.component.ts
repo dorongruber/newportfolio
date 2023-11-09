@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { EmailService } from 'src/app/services/mail.service';
 
 
@@ -9,10 +9,10 @@ import { EmailService } from 'src/app/services/mail.service';
   styleUrls: ['./contact.component.css', '../../styles/mainheader.component.css']
 })
 export class ContactComponent implements OnInit {
-  messageFormat = new FormGroup({
-    fromAddress: new FormControl(''),
-    subject: new FormControl(''),
-    newMessage: new FormControl('')
+  form = new FormGroup({
+    fromAddress: new FormControl('', [Validators.required]),
+    subject: new FormControl('', [Validators.required]),
+    newMessage: new FormControl('', [Validators.required])
   });
 
   constructor(
@@ -22,11 +22,14 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
-  SendMail(mail: FormGroup) {
+  SendMail(form: FormGroup) {
+    if(form.invalid) {
+      return;
+    }
     const newmessage = {
-      fromAddress: mail.value.fromAddress,
-      subject: mail.value.subject,
-      newMessage: mail.value.newMessage
+      fromAddress: form.value.fromAddress,
+      subject: form.value.subject,
+      newMessage: form.value.newMessage
     };
     this.emailservice.SendEmail(newmessage);
   }

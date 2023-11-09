@@ -1,5 +1,4 @@
 import { Injectable } from "@angular/core";
-import { AboutComponent } from "../components/about/about.component";
 import { ContactComponent } from "../components/contact/contact.component";
 import { ExperienceComponent } from "../components/experience/experience.component";
 import { LandingComponent } from "../components/landing/landing.component";
@@ -12,46 +11,28 @@ export class SelectedComponentService {
   constructor() {}
 
   InitComponentRef(index: number) {
+    let component: any;
     switch(index) {
-      case 0:
-        return this.getLandingPage();
       case 1:
-        return this.getAboutPage();
+        component = ExperienceComponent;
+        break;
       case 2:
-        return this.getExperincePage();
+        component = ProjectsComponent;
+        break;
       case 3:
-        return this.getProjectsPage();
+        component = TechnologiesComponent;
+        break;
       case 4:
-        return this.getTechPage();
-      case 5:
-        return this.getContactPage();
+        component = ContactComponent;
+        break;
       default:
-        return this.getLandingPage();
+        component = LandingComponent;
     }
-
+    return this.getPage(index, component);
   }
 
-  getLandingPage() {
-    return new TemplateComponent(LandingComponent,0);
+  getPage(index: number, component: any) {
+    return new TemplateComponent(component,index);
   }
 
-  getAboutPage() {
-    return new TemplateComponent(AboutComponent,1);
-  }
-
-  getExperincePage() {
-    return new TemplateComponent(ExperienceComponent,2);
-  }
-
-  getProjectsPage() {
-    return new TemplateComponent(ProjectsComponent,3);
-  }
-
-  getTechPage() {
-    return new TemplateComponent(TechnologiesComponent,4);
-  }
-
-  getContactPage() {
-    return new TemplateComponent(ContactComponent,5);
-  }
 }

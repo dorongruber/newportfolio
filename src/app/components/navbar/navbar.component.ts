@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Icon } from 'src/app/models/icon';
+import { icons } from 'src/app/consts/icons';
 
 @Component({
   selector: 'app-navbar',
@@ -7,16 +7,8 @@ import { Icon } from 'src/app/models/icon';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  iconsList = ['home', 'account_circle','work', 'list', 'card_travel', 'mail'];
-  icons: Icon[] = [];
-  constructor() {
-    for (let i = 0 ; i < this.iconsList.length; i++ ) {
-      this.icons.push({
-        Name: this.iconsList[i],
-        Color: '#324147'
-      });
-    }
-   }
+  icons = icons;
+  constructor() {}
 
   ngOnInit(): void {
 

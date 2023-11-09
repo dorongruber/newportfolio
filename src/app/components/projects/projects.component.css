@@ -6,6 +6,11 @@
   z-index: 0;
 }
 
+.position-container {
+  padding-block-end: var(--medium-font-size);
+  box-sizing: border-box;
+}
+
 .projects-page-title-container {
   display: flex;
   flex-direction: row;

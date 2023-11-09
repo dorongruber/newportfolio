@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import {MatIconModule} from '@angular/material/icon';
-
+import { NgOptimizedImage } from '@angular/common'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -13,7 +13,6 @@ import { ComponentDirective } from './directives/component.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IconComponent } from './components/icon/icon.component';
 import { LandingComponent } from './components/landing/landing.component';
-import { AboutComponent } from './components/about/about.component';
 import { TechnologiesComponent } from './components/technologies/technologies.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ProjectsComponent } from './components/projects/projects.component';
@@ -33,7 +32,6 @@ import { HeaderComponent } from './components/header/header.component';
     ComponentDirective,
     IconComponent,
     LandingComponent,
-    AboutComponent,
     TechnologiesComponent,
     ExperienceComponent,
     ProjectsComponent,
@@ -47,7 +45,8 @@ import { HeaderComponent } from './components/header/header.component';
     BrowserAnimationsModule,
     MatIconModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]

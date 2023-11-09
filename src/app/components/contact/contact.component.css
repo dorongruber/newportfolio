@@ -5,27 +5,22 @@
   align-items: center;
 }
 
-label {
+form {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  line-height: 40px;
-  font-weight: 700;
-  font-size: var(--large-forn-size);
-  color: var(--color5);
+  gap: 10px;
 }
 
 input, textarea {
   text-transform: none;
-  font-size: var(--large-forn-size);
+  font-size: var(--large-font-size);
   background-color: var(--color2);
   color: var(--color5);
   padding-block: 7px;
   padding-inline-start: 15px;
-  border-radius: 15px 15px 0px 0px;
   border: transparent;
-  border-bottom: 3px solid var(--color1);
   outline: transparent;
+  border-radius: 5px;
   box-sizing: border-box;
 }
 
@@ -35,17 +30,11 @@ h1 {
 }
 
 button {
-  margin-top: 1em;
-  font-size: var(--large-forn-size);
+  font-size: var(--medium-font-size);
   background-color: var(--color2);
   color: var(--color5);
   width: 5em;
   border-radius: 5px;
-}
-
-.input-container {
-  display: flex;
-  flex-direction: column;
 }
 
 .contactInfo-container {
@@ -55,12 +44,13 @@ button {
 
 .info-row {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
 }
 
 .text {
   color: var(--color5);
-  margin-left: 1em;
+  font-weight: bolder;
 }
 
 .form-container {
@@ -70,7 +60,6 @@ button {
 
 textarea {
   height: 11em;
-  border-radius: 5px;
   box-sizing: border-box;
 }
 
@@ -85,7 +74,11 @@ mat-icon {
 
 h1 {
   text-align: center;
-  color: aqua;
+  color: var(--color5);
+}
+
+.email {
+  text-transform: lowercase;
 }
 
 @media (max-width: 640px) {
@@ -96,7 +89,7 @@ h1 {
   }
 }
 
-@media only screen and (min-width: 640px) {
+@media (min-width: 640px) {
 
   h1 {
     width: 15em;

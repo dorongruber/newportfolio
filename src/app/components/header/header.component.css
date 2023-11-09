@@ -20,14 +20,14 @@ header {
   text-shadow: none;
 }
 .header h1:before {
-  background-color: #c50000;
+  background-color: var(--color5);
   content: '';
   display: block;
   height: 3px;
   width: 75px;
 }
 .header h1:after {
-  background-color: #c50000;
+  background-color: var(--color5);
   content: '';
   display: block;
   position:absolute;
@@ -35,4 +35,8 @@ header {
   bottom:0;
   height: 3px;
   width: 75px;
+}
+
+h1 {
+  color: var(--color1);
 }

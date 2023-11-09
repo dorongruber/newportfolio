@@ -1,14 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
 
-  --large-forn-size: 20px;
+  --large-font-size: 20px;
   --medium-font-size: 16px;
   --small-font-size: 12px;
 
   --nav-bar-width: 50px;
-
-  --navbar-color: #D49015;
-
 
   --color1: #FEF6C9;
   --color2: #D4DFC7;

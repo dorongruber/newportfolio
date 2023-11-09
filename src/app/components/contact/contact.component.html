@@ -2,40 +2,23 @@
   <h1>Let's create something together</h1>
 
 <div class="form-container">
-  <form [formGroup]="messageFormat">
+  <form [formGroup]="form" (ngSubmit)="SendMail(form)">
 
-    <div class="input-container">
-      <label for="address">Your Email:
-        <input id="address" type="email" placeholder="Email" formControlName="fromAddress">
-      </label>
-
-    </div>
-
-    <div class="input-container">
-      <label for="title">Subject:
-        <input id="title" type="text" placeholder="Subject" formControlName="subject">
-      </label>
-
-    </div>
-
-    <div class="input-container">
-      <label for="message">Your Message:
-        <textarea id="message" type="text" formControlName="newMessage"></textarea>
-      </label>
-
-      <button (click)="SendMail(messageFormat)">send</button>
-    </div>
+    <input id="address" type="email" placeholder="Email" formControlName="fromAddress">
+    <input id="title" type="text" placeholder="Subject" formControlName="subject">
+    <textarea id="message" type="text" placeholder="Message" formControlName="newMessage"></textarea>
+    <button type="submit" [disabled]="form.invalid">send</button>
 
   </form>
 
   <ul>
     <li class="info-row">
-      <mat-icon class="icon">phone</mat-icon>
+      <mat-icon class="icon">smartphone</mat-icon>
       <div class="text">+972-526230445</div>
     </li>
     <li class="info-row">
       <mat-icon class="icon">email</mat-icon>
-      <div class="text">doron.gruber@gmail.com</div>
+      <div class="text email">doron.gruber&#64;gmail.com</div>
     </li>
     <li class="info-row">
       <img class="git-icon" width="24" height="24" src="../../assets/images/GitHub-Mark-Light-64px.png">

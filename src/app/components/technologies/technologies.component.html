@@ -1,32 +1,17 @@
 <div class="container">
 
   <app-header [title]="'technologies'"></app-header>
-  <div class="img-row-container">
-    <div class="img-col-container">
-      <div class="center-img">
-        <img class="img-title" src="../../assets/images/webdesign.png">
+  <section>
+    <ng-container *ngFor="let techSection of techs">
+      <div class="tech-container">
+        <h2>{{ techSection.title }}</h2>
+        <div class="icons">
+          <ng-container *ngFor="let path of techSection.relatedImgPaths">
+            <img width="70" height="100" [ngSrc]="path" loading="lazy">
+          </ng-container>
+        </div>
       </div>
-      <h2> FRONT END</h2>
-    </div>
-  </div>
-  <div class="front-container">
-
-    <ng-container *ngFor="let icon of iconsFront">
-      <img class="image" [src]="icon">
     </ng-container>
-  </div>
-  <div class="img-row-container">
-    <div class="img-col-container">
-      <div class="center-img">
-        <img class="img-title" src="../../assets/images/backend.png">
-      </div>
-      <h2> BACK END</h2>
-    </div>
-  </div>
-  <div class="back-container">
+  </section>
 
-    <ng-container *ngFor="let icon of iconsBack">
-      <img class="image" [src]="icon">
-    </ng-container>
-  </div>
 </div>

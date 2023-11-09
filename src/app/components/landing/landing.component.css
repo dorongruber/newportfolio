@@ -10,7 +10,7 @@ header {
 }
 
 h1 {
-  font-size: xxx-large;
+  font-size: 42px;
   line-height: 70px;
   color: var(--color4);
   text-shadow: -5px -5px 0 var(--color2);
@@ -18,8 +18,8 @@ h1 {
 }
 
 h4 {
-  font-size: larger;
-  color: white;
+  font-size: var(--medium-font-size);
+  color: var(--color1);
 }
 
 .name {
@@ -42,5 +42,7 @@ h4 {
   h1 {
     text-shadow: 5px 5px 0 var(--color2);
     letter-spacing: 0;
+    padding-inline-start: var(--large-font-size);
+    box-sizing: border-box;
   }
 }

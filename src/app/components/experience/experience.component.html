@@ -1,19 +1,20 @@
 <div class="container">
-  <app-header [title]="'Work Experience'"></app-header>
-  <div class="content-container">
-    <p class="about-page-content">
-      Company: Cambium<br>
-      Work Period: 07/21 - Present
-      <br>
-      I work as a full stack web developer in e-commerce team.
-      we work on clien, dashboard and server for fox group (customers, workers) sites:
-      matrix, partner, dreamtime, footlocker, laline etc.
-    </p>
-    <ul class="about-page-content">
-      <li>Develope responsive UI with a pixel perfect approach</li>
-      <li>Develope and support features for e-commerce sites</li>
-      <li>Realtime troubleshooting</li>
-      <li>Working with team members to improve code efficiency and stracture</li>
-    </ul>
-  </div>
+  <app-header [title]="'Career Path'"></app-header>
+
+  <section>
+    <ng-container *ngFor="let workedAt of expHistory">
+      <hgroup>
+        <h2> {{ workedAt.company }} </h2>
+        <p> {{ workedAt.date }} </p>
+        <p> {{ workedAt.role}} </p>
+        <ng-container *ngIf="workedAt.responsibilities.length">
+          <ul>
+            <ng-container *ngFor="let des of workedAt.responsibilities">
+              <li>{{ des }}</li>
+            </ng-container>
+          </ul>
+        </ng-container>
+      </hgroup>
+    </ng-container>
+  </section>
 </div>

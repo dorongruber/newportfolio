@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { proexpes } from 'src/app/consts/professional-experience';
+import { Experience } from 'src/app/models/experience';
 
 @Component({
   selector: 'app-experience',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
     ,'../../styles/mainheader.component.css']
 })
 export class ExperienceComponent implements OnInit {
-
+  expHistory: Experience[] = proexpes;
   constructor() { }
 
   ngOnInit(): void {

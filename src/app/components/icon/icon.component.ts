@@ -8,27 +8,22 @@ import { ControlService } from 'src/app/services/control.service';
   styleUrls: ['./icon.component.css']
 })
 export class IconComponent implements OnInit {
-  @Input() icon: Icon;
-  @Input()index: number;
-  color: string = '';
+  @Input() icon!: Icon;
   isSelected: boolean = false;
   constructor(
     private controlService: ControlService
   ) {
-    this.icon = new Icon('','');
-    this.index = 0;
   }
 
   ngOnInit() {
-    this.color = this.icon.Color;
     this.controlService.pageChanged.subscribe(res => {
-      this.isSelected = res == this.index;
+      this.isSelected = res == this.icon.index;
 
     });
   }
 
   onPageSelect() {
-    this.controlService.setCurrentPage(this.index);
+    this.controlService.setCurrentPage(this.icon.index);
   }
 
 }
