@@ -35,6 +35,17 @@ button {
   color: var(--color5);
   width: 5em;
   border-radius: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  border: none;
+  transition: color , background-color .3s ease-in-out;
+}
+
+.valid {
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--color2);
+  background-color: var(--color5);
 }
 
 .contactInfo-container {
@@ -69,7 +80,7 @@ ul {
 }
 
 mat-icon {
-  color: var(--color2);
+  color: white;
 }
 
 h1 {
@@ -84,7 +95,6 @@ h1 {
 @media (max-width: 640px) {
   .contact-page {
     flex-direction: column;
-    justify-content: space-around;
     align-items: normal;
   }
 }

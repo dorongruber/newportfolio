@@ -9,7 +9,7 @@
   left: 0;
   transition: width .5s ease-in-out;
   z-index: 100;
-  gap: 10px;
+  gap: var(--large-font-size);
 }
 
 @keyframes InitSideNav {

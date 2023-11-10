@@ -12,7 +12,7 @@ export const proexpes: Experience[]  = [
     "07/21 - 05/23",
     "role: fullstack developer",
     [
-      "Participated in requirements gathering and brainstorming to solidify feature development",
+      "Participated in requirements gathering and brainstorming to solidify feature development.",
       "Convert UI/UX design to user-oriented visuals and logic using front-end languages.",
       "Provided software application engineering and maintenance for development lifecycle.",
       "Analyzed existing software implementations to identify areas requiring improvement , 40% reduction of client duplicate http requests.",

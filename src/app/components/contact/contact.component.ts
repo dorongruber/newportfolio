@@ -10,7 +10,7 @@ import { EmailService } from 'src/app/services/mail.service';
 })
 export class ContactComponent implements OnInit {
   form = new FormGroup({
-    fromAddress: new FormControl('', [Validators.required]),
+    fromAddress: new FormControl('', [Validators.required, Validators.email]),
     subject: new FormControl('', [Validators.required]),
     newMessage: new FormControl('', [Validators.required])
   });

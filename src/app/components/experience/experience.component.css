@@ -1,5 +1,5 @@
 hgroup {
-  padding-inline-start: var(--large-font-size);
+  padding-inline: var(--large-font-size);
   padding-block-end: var(--medium-font-size);
   box-sizing: border-box;
 }
@@ -14,7 +14,8 @@ p {
 
 ul {
   line-height: 30px;
-
+  padding: 0;
+  list-style: none;
 }
 
 li {
@@ -28,11 +29,8 @@ li::marker {
 
 @media (max-width: 640px) {
 
-  ul {
-    padding-inline-start: 30px;
-  }
-
   li {
     font-size: var(--medium-font-size);
+    margin-block-end: 6px;
   }
 }

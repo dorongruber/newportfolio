@@ -1,8 +1,8 @@
 .icon {
   color: var(--color2);
-  font-size: 46px;
+  font-size: 30px;
   width: var(--nav-bar-width);
-  height: 46px;
+  height: 30px;
   text-align: center;
   cursor: pointer;
 }

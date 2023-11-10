@@ -21,7 +21,7 @@ export const techs: Tech[] = [
     'assets/images/svg/paypal.svg',
     'assets/images/svg/material.svg',
   ]),
-  new Tech("DevOps and Deployment", [
+  new Tech("CI\\CD", [
     'assets/images/svg/square-git.svg',
     'assets/images/svg/aws.svg',
     'assets/images/svg/heroku.svg',

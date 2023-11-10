@@ -13,7 +13,7 @@ h1 {
   font-size: 42px;
   line-height: 70px;
   color: var(--color4);
-  text-shadow: -5px -5px 0 var(--color2);
+  text-shadow: -5px -2px 0 var(--color2);
   letter-spacing: 2px;
 }
 
@@ -31,7 +31,7 @@ h4 {
 .position {
   color: var(--color1);
   text-transform: uppercase;
-  text-shadow: 5px 5px 0 var(--color4);
+  text-shadow: 5px 2px 0 var(--color4);
 }
 
 .dot {
@@ -40,7 +40,7 @@ h4 {
 
 @media (max-width: 640px) {
   h1 {
-    text-shadow: 5px 5px 0 var(--color2);
+    text-shadow: 5px 2px 0 var(--color2);
     letter-spacing: 0;
     padding-inline-start: var(--large-font-size);
     box-sizing: border-box;
