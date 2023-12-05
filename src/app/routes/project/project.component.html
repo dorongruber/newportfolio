@@ -44,11 +44,8 @@
       </ng-container>
     </ng-container>
     <ng-template #ChatProject>
-      <ng-container *ngFor="let imageurl of project.images| slice: 0:7">
-        <img src='{{imageurl}}'>
-      </ng-container>
-      <ng-container *ngFor="let imageurl of project.images | slice: 7: project.images.length">
-        <img class="desktop-images" src='{{imageurl}}'>
+      <ng-container *ngFor="let imageurl of project.images">
+        <img [ngClass]="{'desktop-images': imageurl.includes('desk') || imageurl.includes('_d')}" src='{{imageurl}}'>
       </ng-container>
     </ng-template>
   </ul>
