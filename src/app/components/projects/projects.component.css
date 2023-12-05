@@ -39,7 +39,8 @@
 }
 
 .proj3 {
-  background-image: url('../../../assets/images/project3/landing_m.PNG');
+  background-image: url('../../../assets/images/project3/chat_mobile.png');
+  background-size: cover;
 }
 
 .proj4 {
